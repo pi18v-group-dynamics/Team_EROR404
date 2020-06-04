@@ -1,4 +1,44 @@
-﻿if (!indicator)
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Timers;
+using System.Windows.Forms;
+
+namespace WindowsFormsApplication2
+{
+public partial class Form1 : Form
+{
+System.Timers.Timer t;//Обьявление таймера
+int m, s; // Минуты , секуны
+
+bool indicator = true;
+int x, y;
+int counter = 0;
+int[,] field = new int[14, 14];
+public Button but = new Button();
+public Form1()
+{
+int i,j;
+InitializeComponent();
+for (i = 1; i < 13; i++) //генерация кнопок
+{
+for (j = 1; j < 13; j++)
+{
+but = new Button();
+but.Size = new Size(50, 50); //размер кнопки
+but.Location = new Point(i*50, j*50); //ее позиция
+but.Click += new EventHandler(but_Click); //действие при клике
+but.Text = " ";
+this.Controls.Add(but);
+}
+}
+}
+if (!indicator)
 {
 
 MessageBox.Show("На этот раз победили Крестики");
@@ -150,46 +190,7 @@ this.Controls.Add(but);
 }
 }
 }
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Timers;
-using System.Windows.Forms;
 
-namespace WindowsFormsApplication2
-{
-public partial class Form1 : Form
-{
-System.Timers.Timer t;//Обьявление таймера
-int m, s; // Минуты , секуны
-
-bool indicator = true;
-int x, y;
-int counter = 0;
-int[,] field = new int[14, 14];
-public Button but = new Button();
-public Form1()
-{
-int i,j;
-InitializeComponent();
-for (i = 1; i < 13; i++) //генерация кнопок
-{
-for (j = 1; j < 13; j++)
-{
-but = new Button();
-but.Size = new Size(50, 50); //размер кнопки
-but.Location = new Point(i*50, j*50); //ее позиция
-but.Click += new EventHandler(but_Click); //действие при клике
-but.Text = " ";
-this.Controls.Add(but);
-}
-}
-}
 private void OnTimeEvent(object sender, System.Timers.ElapsedEventArgs e)
 {
 s += 1;
