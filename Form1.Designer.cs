@@ -1,0 +1,1 @@
+﻿this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
