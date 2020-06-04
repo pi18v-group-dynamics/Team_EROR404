@@ -133,3 +133,20 @@ components.Dispose();
 }
 base.Dispose(disposing);
 }
+public Form1()
+{
+int i,j;
+InitializeComponent();
+for (i = 1; i < 13; i++) //генерация кнопок
+{
+for (j = 1; j < 13; j++)
+{
+but = new Button();
+but.Size = new Size(50, 50); //размер кнопки
+but.Location = new Point(i*50, j*50); //ее позиция
+but.Click += new EventHandler(but_Click); //действие при клике
+but.Text = " ";
+this.Controls.Add(but);
+}
+}
+}
