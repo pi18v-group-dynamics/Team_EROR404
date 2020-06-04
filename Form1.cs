@@ -1,3 +1,14 @@
+﻿ if (!indicator)
+                    {
+                   
+                    MessageBox.Show("На этот раз победили Крестики");
+                   
+
+                }
+                    else
+                    {
+                 
+                    MessageBox.Show("Победу в этом сражении одержали Нолики");
 namespace WindowsFormsApplication2
 {
     partial class Form2
@@ -44,7 +55,7 @@ namespace WindowsFormsApplication2
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 32);
             this.label1.TabIndex = 0;
-            this.label1.Text = "��� ������ �����";
+            this.label1.Text = "Êòî ïåðâûé õîäèò";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
@@ -58,7 +69,7 @@ namespace WindowsFormsApplication2
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(150, 31);
             this.button1.TabIndex = 1;
-            this.button1.Text = "�";
+            this.button1.Text = "Õ";
             this.button1.UseVisualStyleBackColor = false;
             // 
             // button2
@@ -99,4 +110,4 @@ namespace WindowsFormsApplication2
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
     }
-}
+} 
